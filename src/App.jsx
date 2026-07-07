@@ -2,14 +2,18 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
-import "./styles/main.scss"; // Dica: se o main.scss já importa tudo, você pode remover o App.scss daqui se não for usar
+import NavBar from "./components/NavBar.jsx";
+import Hero from "./components/Hero.jsx";
+import "./styles/main.scss";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    // A div agora envelopa o conteúdo e cobre a tela toda
-    <div className="blueprint-background"></div>
+    <div className="blueprint-background">
+      <NavBar />
+      <Hero />
+    </div>
   );
 }
 

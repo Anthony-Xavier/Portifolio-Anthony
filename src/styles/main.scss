@@ -1,8 +1,53 @@
 // src/styles/main.scss
+@import "variables";
 @import "blueprint";
 
-// Outros estilos globais do seu portfólio...
+// ===== TIPOGRAFIA GLOBAL =====
+* {
+  font-family: $font-body;
+}
+
+html,
 body {
   margin: 0;
   padding: 0;
+  font-family: $font-body;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+// Títulos: Space Grotesk
+h1,
+h2,
+h3 {
+  font-family: $font-display;
+  font-weight: 600;
+}
+
+// Código/Técnico: IBM Plex Mono
+code,
+pre,
+.code,
+.terminal,
+.label,
+.tag,
+.badge,
+.meta {
+  font-family: $font-mono;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+@media (max-width: 768px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html,
+  body {
+    font-size: 13px;
+  }
 }

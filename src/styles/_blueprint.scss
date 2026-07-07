@@ -18,3 +18,29 @@
     $grid-major-size $grid-major-size,
     $grid-major-size $grid-major-size;
 }
+
+/* ===== MEDIA QUERIES ===== */
+
+@media (max-width: 768px) {
+  .blueprint-background {
+    --grid-size: 15px;
+    --grid-major-size: 75px;
+    background-size:
+      var(--grid-size) var(--grid-size),
+      var(--grid-size) var(--grid-size),
+      var(--grid-major-size) var(--grid-major-size),
+      var(--grid-major-size) var(--grid-major-size);
+  }
+}
+
+@media (max-width: 480px) {
+  .blueprint-background {
+    --grid-size: 10px;
+    --grid-major-size: 50px;
+    background-size:
+      var(--grid-size) var(--grid-size),
+      var(--grid-size) var(--grid-size),
+      var(--grid-major-size) var(--grid-major-size),
+      var(--grid-major-size) var(--grid-major-size);
+  }
+}

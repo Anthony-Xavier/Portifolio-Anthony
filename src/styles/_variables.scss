@@ -1,5 +1,8 @@
 // src/styles/_variables.scss
 
+// GOOGLE FONTS IMPORTS
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
 // 1. Paleta de Cores (Estilo Desenho Técnico/Prancheta)
 $bg-blueprint: #003366; // O azul escuro clássico de fundo
 $blue-line-thin: rgba(
@@ -31,13 +34,22 @@ $grid-size: 20px; // Tamanho do quadrado menor da grade
 $grid-major-size: 100px; // Tamanho do bloco maior (20px * 5)
 
 // 3. Tipografia (Fontes que combinam com engenharia)
-$font-technical:
-  "Courier New", Courier, monospace; // Para códigos e dados técnicos
-$font-sans:
-  "Inter",
+$font-mono:
+  "IBM Plex Mono", monospace; // Código, nav, tags, labels, metadados, terminal
+$font-body:
+  "IBM Plex Sans",
   system-ui,
   -apple-system,
-  sans-serif; // Para textos de leitura longa
+  sans-serif; // Corpo de texto, parágrafos
+$font-display:
+  "Space Grotesk",
+  system-ui,
+  -apple-system,
+  sans-serif; // Títulos h1, h2
+
+// Mantendo as antigas para compatibilidade
+$font-technical: $font-mono;
+$font-sans: $font-body;
 
 // 2. TEXTO SOBRE AZUL
 $linework: #e7f1fa; // Texto principal / SVG
