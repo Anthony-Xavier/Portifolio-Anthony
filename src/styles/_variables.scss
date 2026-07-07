@@ -1,0 +1,63 @@
+// src/styles/_variables.scss
+
+// 1. Paleta de Cores (Estilo Desenho Técnico/Prancheta)
+$bg-blueprint: #003366; // O azul escuro clássico de fundo
+$blue-line-thin: rgba(
+  255,
+  255,
+  255,
+  0.12
+); // Linhas da grade secundária (finas)
+$blue-line-strong: rgba(
+  255,
+  255,
+  255,
+  0.28
+); // Linhas da grade principal (fortes)
+
+// Cores complementares para textos e destaques
+$color-text-main: #ffffff; // Texto principal (branco)
+$color-text-muted: #a0c4ff; // Texto secundário/jargões (azul claro apagado)
+$color-accent: #ffcc00; // Cor de destaque (amarelo de lapiseira/marcação, ótimo para botões e links)
+$color-border: rgba(
+  255,
+  255,
+  255,
+  0.5
+); // Bordas dos cards (estilo linha de cota/desenho)
+
+// 2. Escala da Grade (Grid System do Blueprint)
+$grid-size: 20px; // Tamanho do quadrado menor da grade
+$grid-major-size: 100px; // Tamanho do bloco maior (20px * 5)
+
+// 3. Tipografia (Fontes que combinam com engenharia)
+$font-technical:
+  "Courier New", Courier, monospace; // Para códigos e dados técnicos
+$font-sans:
+  "Inter",
+  system-ui,
+  -apple-system,
+  sans-serif; // Para textos de leitura longa
+
+// 2. TEXTO SOBRE AZUL
+$linework: #e7f1fa; // Texto principal / SVG
+$cyan: #7ebadd; // Eyebrows / destaques
+$hero-sub: #c9dae8; // Subtítulo do hero
+$lede-azul: #b9ccdb; // Lede nas seções azuis
+$meta-row: #9fb7cc; // Itens de metadados
+$diagram-sub: #8fa9be; // Subtexto no SVG
+$footer-muted: #7c93a8; // Rodapé inferior
+$diagram-fill: rgba(126, 186, 221, 0.06); // Preench. caixas SVG
+
+// 3. PAPER (FUNDO BEGE)
+$paper: #ece4d0; // Fundo das seções claras
+$paper-line: rgba(27, 35, 48, 0.08); // Divisórias no bege
+
+// 4. TEXTO SOBRE BEGE
+$ink: #1b2330; // Texto principal
+$ink-soft: #586273; // Texto secundário
+
+// 5. ACENTO (ÂMBAR)
+$amber: #e2722a; // CTA / botões / destaques
+$amber-hover: #f08a45; // Hover dos CTAs
+$amber-dark: #b85a1e; // Eyebrows / rev-tag

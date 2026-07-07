@@ -1,0 +1,20 @@
+// src/styles/_blueprint.scss
+@import "variables"; // Importa as variáveis para poder usá-las aqui
+
+.blueprint-background {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $bg-blueprint;
+
+  background-image:
+    linear-gradient($blue-line-thin 1px, transparent 1px),
+    linear-gradient(90deg, $blue-line-thin 1px, transparent 1px),
+    linear-gradient($blue-line-strong 1px, transparent 1px),
+    linear-gradient(90deg, $blue-line-strong 1px, transparent 1px);
+
+  background-size:
+    $grid-size $grid-size,
+    $grid-size $grid-size,
+    $grid-major-size $grid-major-size,
+    $grid-major-size $grid-major-size;
+}
