@@ -27,6 +27,9 @@ const Navbar = () => {
           <a href="#stack">Stack</a>
         </li>
         <li className="navbar__item">
+          <a href="#servicos">Serviços</a>
+        </li>
+        <li className="navbar__item">
           <a href="#projetos">Projetos</a>
         </li>
         <li className="navbar__item">

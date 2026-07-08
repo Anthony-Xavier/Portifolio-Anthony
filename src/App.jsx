@@ -5,6 +5,8 @@ import heroImg from "./assets/hero.png";
 import NavBar from "./components/NavBar.jsx";
 import Hero from "./components/Hero.jsx";
 import "./styles/main.scss";
+import Sobre from "./components/Sobre.jsx";
+import Stack from "./components/Stack.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,6 +15,8 @@ function App() {
     <div className="blueprint-background">
       <NavBar />
       <Hero />
+      <Sobre />
+      <Stack />
     </div>
   );
 }

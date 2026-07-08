@@ -1,0 +1,105 @@
+@import "../styles/_variables.scss";
+
+.sobre {
+  background: $paper;
+  color: $ink;
+  padding: 4rem 1.25rem;
+  font-family: $font-body;
+}
+
+.sobre__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sobre__eyebrow {
+  display: inline-block;
+  color: $amber;
+  font-family: $font-mono;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-bottom: 1rem;
+}
+
+.sobre__title {
+  font-family: $font-display;
+  font-weight: 700;
+  font-size: 2.25rem;
+  margin: 0 0 1rem 0;
+  color: $ink;
+}
+
+.sobre__lede {
+  color: $ink;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.sobre__body {
+  color: $ink-soft;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.sobre__meta {
+  border-top: 1px solid $paper-line;
+  margin-top: 1.5rem;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid transparent;
+}
+
+.meta-row + .meta-row {
+  border-top: 1px solid $paper-line;
+}
+
+.meta-key {
+  color: $amber;
+  font-family: $font-mono;
+  font-weight: 700;
+}
+
+.meta-value {
+  color: $ink-soft;
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .sobre__title {
+    font-size: 1.6rem;
+  }
+
+  .meta-value {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre__inner {
+    padding: 0 12px;
+  }
+
+  .sobre__title {
+    font-size: 1.4rem;
+  }
+
+  .sobre__lede,
+  .sobre__body {
+    font-size: 14px;
+  }
+
+  .meta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .meta-value {
+    text-align: left;
+  }
+}

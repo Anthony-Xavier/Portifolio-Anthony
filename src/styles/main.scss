@@ -16,6 +16,14 @@ body {
   line-height: 1.6;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px; // offset for sticky navbar
+}
+
 // Títulos: Space Grotesk
 h1,
 h2,
@@ -43,11 +51,19 @@ pre,
   body {
     font-size: 14px;
   }
+
+  section {
+    scroll-margin-top: 70px;
+  }
 }
 
 @media (max-width: 480px) {
   html,
   body {
     font-size: 13px;
+  }
+
+  section {
+    scroll-margin-top: 60px;
   }
 }

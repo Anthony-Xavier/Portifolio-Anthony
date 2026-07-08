@@ -1,0 +1,110 @@
+@import "../styles/_variables.scss";
+
+.stack {
+  padding: 4rem 1.5rem;
+  font-family: $font-body;
+}
+
+.stack__inner {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.stack__eyebrow {
+  display: inline-block;
+  color: $amber;
+  font-family: $font-mono;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-bottom: 1rem;
+  margin-top: 2 rem;
+}
+
+.stack__title {
+  font-family: $font-display;
+  font-size: 36px;
+  margin: 0.25rem 0 0.6rem 0;
+  color: $linework;
+}
+
+.stack__lead {
+  color: $lede-azul;
+  margin-bottom: 1.5rem;
+}
+
+.stack__card {
+  border: 1px solid $blue-line-strong;
+  padding: 24px;
+  border-radius: 4px;
+  background: $bg-blueprint;
+}
+
+.stack__group {
+  padding: 18px 0;
+}
+
+.group__head {
+  font-family: $font-mono;
+  color: $cyan;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.group__tags {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.stack__tag {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid $blue-line-strong;
+  color: $linework;
+  font-family: $font-mono;
+  font-size: 13px;
+  background: transparent;
+}
+
+.stack__divider {
+  height: 1px;
+  background: $blue-line-thin;
+  margin: 6px 0 6px 0;
+}
+
+@media (max-width: 760px) {
+  .stack__title {
+    font-size: 28px;
+  }
+
+  .stack__tag {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stack {
+    padding: 2rem 0.8rem;
+  }
+
+  .stack__inner {
+    padding: 0 10px;
+  }
+
+  .stack__card {
+    padding: 16px;
+  }
+
+  .group__tags {
+    gap: 8px;
+  }
+
+  .stack__tag {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+}
