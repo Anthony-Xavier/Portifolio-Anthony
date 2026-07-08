@@ -3,6 +3,7 @@ import "./NavBar.scss";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,31 +14,64 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return (
-    <header className={`navbar ${isScrolled ? "navbar--scrolled" : ""}`}>
-      {/* Logo */}
-      <div className="navbar__logo">Anthony Xavier</div>
+  const toggleMobileMenu = () => {
+    setIsMobileOpen((current) => !current);
+  };
 
-      {/* Links de Navegação */}
-      <ul className="navbar__links">
+  const closeMobileMenu = () => {
+    setIsMobileOpen(false);
+  };
+
+  return (
+    <header
+      className={`navbar ${isScrolled ? "navbar--scrolled" : ""} ${isMobileOpen ? "navbar--open" : ""}`}
+    >
+      <div className="navbar__top">
+        <div className="navbar__logo">Anthony Xavier</div>
+
+        <button
+          className="navbar__toggle"
+          type="button"
+          aria-label={isMobileOpen ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={isMobileOpen}
+          onClick={toggleMobileMenu}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </div>
+
+      <ul
+        className={`navbar__links ${isMobileOpen ? "navbar__links--open" : ""}`}
+      >
         <li className="navbar__item">
-          <a href="#sobre">Sobre</a>
+          <a href="#sobre" onClick={closeMobileMenu}>
+            Sobre
+          </a>
         </li>
         <li className="navbar__item">
-          <a href="#stack">Stack</a>
+          <a href="#stack" onClick={closeMobileMenu}>
+            Stack
+          </a>
         </li>
         <li className="navbar__item">
-          <a href="#servicos">Serviços</a>
+          <a href="#servicos" onClick={closeMobileMenu}>
+            Serviços
+          </a>
         </li>
         <li className="navbar__item">
-          <a href="#projetos">Projetos</a>
+          <a href="#projetos" onClick={closeMobileMenu}>
+            Projetos
+          </a>
         </li>
         <li className="navbar__item">
-          <a href="#contato">Contato</a>
+          <a href="#contato" onClick={closeMobileMenu}>
+            Contato
+          </a>
         </li>
       </ul>
 
-      {/* Botão de Ação */}
       <div className="navbar__cta">
         <button className="btn-primary">Contato</button>
       </div>
