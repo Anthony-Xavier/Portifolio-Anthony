@@ -7,6 +7,10 @@ import Hero from "./components/Hero.jsx";
 import "./styles/main.scss";
 import Sobre from "./components/Sobre.jsx";
 import Stack from "./components/Stack.jsx";
+import Servicos from "./components/Servicos.jsx";
+import Projetos from "./components/Projetos.jsx";
+import Contato from "./components/Contato.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -17,6 +21,10 @@ function App() {
       <Hero />
       <Sobre />
       <Stack />
+      <Servicos />
+      <Projetos />
+      <Contato />
+      <Footer />
     </div>
   );
 }

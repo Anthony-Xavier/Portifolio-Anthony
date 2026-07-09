@@ -1,0 +1,143 @@
+@import "../styles/_variables.scss";
+
+.contato {
+  padding: 100px 24px;
+  color: $color-text-main;
+}
+
+.contato__inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+
+.contato__eyebrow {
+  display: inline-block;
+  font-family: $font-mono;
+  color: $cyan;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.contato__title {
+  font-family: $font-display;
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  line-height: 0.98;
+  margin: 0;
+  max-width: 13ch;
+}
+
+.contato__lead {
+  color: $hero-sub;
+  max-width: 44rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.contato__cta {
+  margin-top: 1.75rem;
+}
+
+.contato__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.8rem;
+  border-radius: 0.75rem;
+  background: $amber;
+  color: $ink;
+  text-decoration: none;
+  font-weight: 700;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contato__button:hover {
+  background: $amber-hover;
+  transform: translateY(-1px);
+}
+
+.contato__grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.contato__row {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  padding: 1.4rem 1.5rem;
+}
+
+.contato__row--links {
+  grid-column: 1 / -1;
+}
+
+.contato__label {
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: $cyan;
+  margin-bottom: 0.65rem;
+}
+
+.contato__value {
+  color: $color-text-main;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.contato__links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contato__icon-link {
+  width: 3.4rem;
+  height: 3.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+  color: $color-text-main;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.contato__icon-link:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.13);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.contato__icon-link svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+@media (max-width: 860px) {
+  .contato {
+    padding: 70px 20px;
+  }
+
+  .contato__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contato__title {
+    font-size: clamp(2.25rem, 8vw, 3rem);
+  }
+}

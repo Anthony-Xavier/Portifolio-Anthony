@@ -2,6 +2,15 @@ import React from "react";
 import "./Hero.scss";
 
 const Hero = () => {
+  const scrollToStack = () => {
+    const el = document.getElementById("stack");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      window.location.hash = "#stack";
+    }
+  };
+
   return (
     <section className="hero">
       {/* Subtitle */}
@@ -21,7 +30,11 @@ const Hero = () => {
         <button className="hero__btn hero__btn--primary">
           Falar sobre seu projeto
         </button>
-        <button className="hero__btn hero__btn--secondary">
+        <button
+          type="button"
+          className="hero__btn hero__btn--secondary"
+          onClick={scrollToStack}
+        >
           Ver stack técnica
         </button>
       </div>
