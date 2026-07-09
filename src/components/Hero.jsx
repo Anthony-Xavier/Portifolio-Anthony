@@ -11,6 +11,8 @@ const Hero = () => {
     }
   };
 
+  const whatsappHref = "https://wa.me/5545996445445";
+
   return (
     <section className="hero">
       {/* Subtitle */}
@@ -27,9 +29,14 @@ const Hero = () => {
 
       {/* CTA Buttons */}
       <div className="hero__buttons">
-        <button className="hero__btn hero__btn--primary">
+        <a
+          className="hero__btn hero__btn--primary"
+          href={whatsappHref}
+          target="_blank"
+          rel="noreferrer"
+        >
           Falar sobre seu projeto
-        </button>
+        </a>
         <button
           type="button"
           className="hero__btn hero__btn--secondary"

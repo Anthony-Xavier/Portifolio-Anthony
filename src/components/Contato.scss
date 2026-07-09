@@ -94,6 +94,12 @@
   line-height: 1.7;
 }
 
+.contato__phone-link {
+  color: $color-text-main;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .contato__links {
   display: flex;
   align-items: center;

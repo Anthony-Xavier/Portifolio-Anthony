@@ -14,6 +14,8 @@ const ContactLink = ({ href, label, children }) => (
 );
 
 const Contato = () => {
+  const whatsappHref = "https://wa.me/5545996445445";
+
   return (
     <section id="contato" className="contato">
       <div className="contato__inner">
@@ -44,13 +46,31 @@ const Contato = () => {
 
           <div className="contato__row">
             <div className="contato__label">TELEFONE</div>
-            <div className="contato__value">+55 (54) 99644-5445</div>
+            <div className="contato__value">
+              <a
+                className="contato__phone-link"
+                href={whatsappHref}
+                target="_blank"
+                rel="noreferrer"
+              >
+                +55 (54) 99644-5445
+              </a>
+            </div>
           </div>
 
           <div className="contato__row contato__row--links">
             <div className="contato__label">CONEXÕES</div>
 
             <div className="contato__links">
+              <ContactLink
+                href={whatsappHref}
+                label="Enviar mensagem no WhatsApp"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12.04 2.007c-5.52 0-9.991 4.47-9.991 9.99 0 1.763.46 3.494 1.336 5.032L2 22l4.012-1.054a9.93 9.93 0 005.999 1.82h.002c5.52 0 9.99-4.47 9.99-9.99 0-5.52-4.47-9.99-9.99-9.99zm5.45 14.978c-.236.663-1.4 1.27-1.96 1.35-.52.08-1.16.11-2.03-.22-.62-.24-1.26-.53-2.79-1.31-2.08-.96-3.42-2.66-3.95-3.46-.32-.49-.66-1.12-.74-1.71-.08-.59-.07-1.07-.07-1.17.01-.34.47-.71.95-.71.46 0 .97.03 1.4.42.43.38.84.98.95 1.33.11.35.01.78-.21 1.13-.22.34-.44.55-.48.6-.04.05-.09.11-.02.21.07.11.31.39.67.64.45.3.82.44 1.18.56.39.13.74.11 1.02.07.31-.05.95-.38 1.14-.49.18-.11.39-.15.68-.09.29.07 1.8.85 2.1 1.01.3.16.5.23.57.36.08.13.08.73-.15 1.4z" />
+                </svg>
+              </ContactLink>
+
               <ContactLink
                 href="mailto:anthonyltx12@gmail.com"
                 label="Enviar e-mail"
