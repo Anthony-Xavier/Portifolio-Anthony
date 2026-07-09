@@ -27,7 +27,7 @@ const Projetos = () => {
   ];
 
   return (
-    <section className="projetos">
+    <section className="projetos" id="projetos">
       <div className="projetos__inner">
         <span className="projetos__eyebrow">— ESTUDOS DE CASO</span>
 
