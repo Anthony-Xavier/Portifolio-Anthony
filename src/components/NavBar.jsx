@@ -4,6 +4,7 @@ import "./NavBar.scss";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const whatsappHref = "https://wa.me/5545996445445";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,14 +67,26 @@ const Navbar = () => {
           </a>
         </li>
         <li className="navbar__item">
-          <a href="#contato" onClick={closeMobileMenu}>
+          <a
+            href={whatsappHref}
+            target="_blank"
+            rel="noreferrer"
+            onClick={closeMobileMenu}
+          >
             Contato
           </a>
         </li>
       </ul>
 
       <div className="navbar__cta">
-        <button className="btn-primary">Contato</button>
+        <a
+          className="btn-primary"
+          href={whatsappHref}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Contato
+        </a>
       </div>
     </header>
   );
