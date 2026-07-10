@@ -6,7 +6,7 @@
   background: $paper;
 
   &__inner {
-    max-width: 980px;
+    max-width: 1200px;
     margin: 0 auto;
   }
 
@@ -22,90 +22,290 @@
 
   &__title {
     font-family: $font-display;
-    font-size: 36px;
-    margin: 0.25rem 0 0.6rem 0;
+    font-size: 40px;
+    margin: 0.25rem 0 0.75rem 0;
     color: $ink;
   }
 
   &__lead {
     color: $ink;
-
-    margin-bottom: 1.5rem;
+    max-width: 760px;
+    margin-bottom: 2rem;
+    line-height: 1.8;
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-    margin-top: 22px;
-    background: $bg-blueprint;
+    gap: 24px;
+    margin-top: 1.8rem;
   }
 }
 
 .projeto {
+  overflow: hidden;
+  border-radius: 22px;
+  height: 360px;
   position: relative;
-  padding: 28px;
-  border: 1px dashed rgba(255, 255, 255, 0.05);
-  background: transparent;
-  min-height: 180px;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.35s ease;
 
-  &__ribbon {
-    position: absolute;
-    top: -14px;
-    right: 12px;
-    transform: rotate(-22deg);
-    background: $amber;
-    color: $bg-blueprint;
-    padding: 6px 10px;
-    font-weight: 700;
-    font-size: 12px;
-    border-radius: 2px;
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.22);
   }
+}
 
-  &__title {
-    color: $linework;
-    font-size: 18px;
-    margin: 0 0 10px 0;
-  }
+.projeto__card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: inherit;
+  background-size: cover;
+  background-position: center;
+}
 
-  &__desc {
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 0 0 16px 0;
-  }
+.projeto__mask {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.18) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  transition: opacity 0.35s ease;
+}
 
-  &__tags {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
+.projeto:hover .projeto__mask {
+  opacity: 0.98;
+}
 
-  &__tag {
-    display: inline-block;
-    padding: 6px 10px;
-    border-radius: 4px;
-    border: 1px solid $blue-line-strong;
-    color: $linework;
-    font-family: $font-mono;
-    font-size: 12px;
-    background: transparent;
-  }
+.projeto__content {
+  position: relative;
+  z-index: 1;
+  padding: 24px;
+  text-align: center;
+  width: 100%;
+}
+
+.projeto__name {
+  color: $paper;
+  font-size: 26px;
+  margin: 0 0 0.85rem;
+  line-height: 1.1;
+}
+
+.projeto__tags {
+  display: inline-flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+.projeto__tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: $paper;
+  font-size: 12px;
+  font-family: $font-mono;
+}
+
+.projeto__button {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #7f5dff 0%, #4d6dff 100%);
+  border: none;
+  color: $paper;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.projeto:hover .projeto__button {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projeto__bg--1 {
+  background-image:
+    linear-gradient(180deg, rgba(26, 18, 54, 0.7), rgba(10, 14, 30, 0.9)),
+    url("../assets/img/AgencyAi.png");
 }
 
 @media (max-width: 1000px) {
   .projetos__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .projeto {
+    height: 320px;
+  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 760px) {
   .projetos__grid {
     grid-template-columns: 1fr;
   }
 
   .projeto {
-    padding: 20px;
+    height: 280px;
   }
 }
-@import "../styles/_variables.scss";
+
+@media (max-width: 520px) {
+  .projetos {
+    padding: 3rem 1rem;
+  }
+
+  .projeto {
+    height: 260px;
+  }
+
+  .projeto__name {
+    font-size: 22px;
+  }
+
+  .projeto__content {
+    padding: 18px;
+  }
+}
+
+.projeto-detalhe__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 1000;
+}
+
+.projeto-detalhe__modal {
+  width: min(1200px, 100%);
+  border-radius: 28px;
+  background: rgba(9, 14, 32, 0.98);
+  box-shadow: 0 36px 100px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  position: relative;
+}
+
+.projeto-detalhe__close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: $paper;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s ease;
+}
+
+.projeto-detalhe__close:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.projeto-detalhe__body {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  min-height: 620px;
+}
+
+.projeto-detalhe__media {
+  position: relative;
+  min-height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.projeto-detalhe__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.projeto-detalhe__info {
+  padding: 44px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.projeto-detalhe__title {
+  color: $amber;
+  font-size: 38px;
+  margin: 0;
+}
+
+.projeto-detalhe__text {
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.9;
+  font-size: 16px;
+  margin: 0;
+}
+
+.projeto-detalhe__list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: rgba(255, 255, 255, 0.82);
+  list-style: disc;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.projeto-detalhe__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+@media (max-width: 960px) {
+  .projeto-detalhe__body {
+    grid-template-columns: 1fr;
+  }
+
+  .projeto-detalhe__media {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 620px) {
+  .projeto-detalhe__overlay {
+    padding: 1rem;
+  }
+
+  .projeto-detalhe__info {
+    padding: 28px 24px;
+  }
+
+  .projeto-detalhe__title {
+    font-size: 30px;
+  }
+}
