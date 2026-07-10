@@ -11,7 +11,7 @@ const Hero = () => {
     }
   };
 
-  const whatsappHref = "https://wa.me/5545996445445";
+  const whatsappHref = "https://wa.me/5554996445445";
 
   return (
     <section className="hero">

@@ -14,7 +14,7 @@ const ContactLink = ({ href, label, children }) => (
 );
 
 const Contato = () => {
-  const whatsappHref = "https://wa.me/5545996445445";
+  const whatsappHref = "https://wa.me/5554996445445";
 
   return (
     <section id="contato" className="contato">
