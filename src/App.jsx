@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import NavBar from "./components/NavBar.jsx";
 import Hero from "./components/Hero.jsx";
 import "./styles/main.scss";
@@ -22,6 +23,7 @@ function App() {
       <Contato />
       <Footer />
       <WhatsAppFloat />
+      <Analytics />
     </div>
   );
 }
