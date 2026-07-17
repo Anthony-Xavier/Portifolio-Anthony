@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import agencyVideo from "../assets/videos/Agency.AI.mp4";
+import IphoneVideo from "../assets/videos/Iphone.mp4";
 import "./Projetos.scss";
 
 const Projetos = () => {
@@ -20,6 +21,21 @@ const Projetos = () => {
       projectUrl: "#",
       repoUrl: "#",
       video: agencyVideo,
+    },
+    {
+      id: 2,
+      title: "Iphone Clone",
+      tags: ["React", "Tailwindcss", "JS"],
+      bgClass: "projeto__bg--2",
+      details: "Projeto para treinar as minha habilidades em tailwindcss.",
+      highlights: [
+        "Design responsivo",
+        "Modo escuro",
+        "Selecionar a cor do iphone",
+      ],
+      projectUrl: "#",
+      repoUrl: "#",
+      video: IphoneVideo,
     },
   ];
 
