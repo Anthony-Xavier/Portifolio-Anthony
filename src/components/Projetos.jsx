@@ -47,8 +47,9 @@ const Projetos = () => {
         "Projeto freelance para a Arteirinha 3D. Site institucional, mostrando o catálogo com opção de compra.",
       highlights: [
         "Design responsivo",
-        "Modo escuro",
-        "Selecionar a cor do iphone",
+        "Botão do whatsapp",
+        "Carrinho de compras",
+        "Catalogo de produtos",
       ],
       projectUrl: "https://www.arteirinha3d.com.br/",
       repoUrl: "#",
