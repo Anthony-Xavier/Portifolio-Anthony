@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import agencyVideo from "../assets/videos/Agency.AI.mp4";
 import IphoneVideo from "../assets/videos/Iphone.mp4";
+import ArterinhaVideo from "../assets/videos/Arteirinha.mp4";
 import "./Projetos.scss";
 
 const Projetos = () => {
@@ -36,6 +37,22 @@ const Projetos = () => {
       projectUrl: "#",
       repoUrl: "#",
       video: IphoneVideo,
+    },
+    {
+      id: 3,
+      title: "Arterinha",
+      tags: ["React", "Tailwindcss", "JS"],
+      bgClass: "projeto__bg--3",
+      details:
+        "Projeto freelance para a Arteirinha 3D. Site institucional, mostrando o catálogo com opção de compra.",
+      highlights: [
+        "Design responsivo",
+        "Modo escuro",
+        "Selecionar a cor do iphone",
+      ],
+      projectUrl: "https://www.arteirinha3d.com.br/",
+      repoUrl: "#",
+      video: ArterinhaVideo,
     },
   ];
 
@@ -134,6 +151,28 @@ const Projetos = () => {
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
+                <div className="projeto-detalhe__actions">
+                  {activeProject.projectUrl !== "#" && (
+                    <a
+                      className="projeto-detalhe__link"
+                      href={activeProject.projectUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Ver projeto
+                    </a>
+                  )}
+                  {activeProject.repoUrl !== "#" && (
+                    <a
+                      className="projeto-detalhe__link projeto-detalhe__link--secondary"
+                      href={activeProject.repoUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Ver repositório
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           </div>

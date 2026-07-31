@@ -157,6 +157,12 @@
     url("../assets/img/Iphone.png");
 }
 
+.projeto__bg--3 {
+  background-image:
+    linear-gradient(180deg, rgba(26, 18, 54, 0.7), rgba(10, 14, 30, 0.9)),
+    url("../assets/img/Arteirinha.png");
+}
+
 @media (max-width: 1000px) {
   .projetos__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -290,6 +296,32 @@
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 8px;
+}
+
+.projeto-detalhe__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 18px;
+  border-radius: 999px;
+  background: $amber;
+  color: $ink;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.projeto-detalhe__link:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.projeto-detalhe__link--secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: $paper;
 }
 
 @media (max-width: 960px) {
